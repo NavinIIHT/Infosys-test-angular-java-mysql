@@ -1,0 +1,13 @@
+h3
+{
+    font-family: 'Cinzel', serif;
+    font-size : 2em;
+    font-weight : bold;
+}
+
+.message
+{
+    font-family: 'Cinzel', serif;
+    font-size : 1.25em;
+    line-height : 2;
+}
