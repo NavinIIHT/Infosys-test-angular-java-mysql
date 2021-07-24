@@ -1,0 +1,33 @@
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
+module.exports = function (config)
+{
+  config.set
+  ({
+    basePath : '',
+    frameworks : ['jasmine', '@angular-devkit/build-angular'],
+    plugins :
+    [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('./src/verification/configs/VerificationReporter'),
+    ],
+    client :
+    {
+      clearContext : true
+    },
+    autoWatch : false,
+    browsers : ['ChromeHeadless'],
+    colors : true,
+    concurrency : 1,
+    failOnEmptyTestSuite : true,
+    failOnFailingTestSuite : false,
+    logLevel : config.INFO,
+    port : 4610,
+    reporters : ['VerificationReporter'],
+    restartOnFileChange : false,
+    singleRun : true
+  });
+};
